@@ -1,8 +1,8 @@
 FROM ubuntu:focal
 
-RUN apt update && \
-    apt upgrade -y && \
-    apt install -y cmake make build-essential doxygen git git-lfs curl net-tools srecord rlwrap autoconf automake libxmu-dev gcc-msp430 default-jdk ant openjdk-11-jdk python3-pip python3-serial libncurses-dev p7zip-full libusb-dev libgconf-2-4
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y cmake make build-essential doxygen git git-lfs curl net-tools srecord rlwrap autoconf automake libxmu-dev gcc-msp430 default-jdk ant openjdk-11-jdk python3-pip python3-serial libncurses-dev p7zip-full libusb-dev libgconf-2-4
 
 RUN mkdir ~/toolchain && \
     cd ~/toolchain && \
